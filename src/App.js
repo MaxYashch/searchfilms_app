@@ -4,7 +4,6 @@ import { NotFound } from './pages/NotFound';
 import { Registration } from './pages/Registration';
 import { SignIn } from './pages/SignIn';
 import { MainPage } from './components/MainPage';
-
 import { AuthProvider } from './hoc/AuthProvider';
 import './styles/App.css';
 

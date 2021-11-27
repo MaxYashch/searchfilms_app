@@ -1,11 +1,11 @@
 function Footer() {
   return (
-    <footer className="page-footer blue darken-2">
+    <footer className="page-footer blue darken-2 footer">
       <div className="footer-copyright">
         <div className="container">
           © {new Date().getFullYear()} Copyright Text
         </div>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <ul id="nav-mobile" className="right">
           <li>
             <a
               href="https://github.com/MaxYashch/searchfilms_app"

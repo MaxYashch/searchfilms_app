@@ -5,13 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex; 
+  flex-direction: column; 
 }
 
 nav {
   padding: 0 1rem;
 }
 
-.content {
+.headerLinks {
+  display: flex;
+}
+
+.container {
   min-height: calc(100vh-70px-64px);
   padding: 1.5rem 0;
 }
@@ -44,6 +51,12 @@ iframe {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.footer{
+  position:absolute;
+   bottom:0;
+   width:100%;
 }
 
 .repo {

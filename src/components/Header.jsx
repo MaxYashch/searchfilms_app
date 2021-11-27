@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <>
-      <nav className="deep-orange accent-3">
+      <nav className="deep-orange accent-3 header">
         <div className="nav-wrapper">
           <a href="!" className="brand-logo left">
             Searchfilms

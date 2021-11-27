@@ -9,7 +9,7 @@ const MainPage = () => {
           <Link to="/" className="brand-logo left">
             Searchfilms
           </Link>
-          <ul id="nav-mobile" className="right">
+          <ul id="nav-mobile" className="right headerLinks">
             <Link to="/signin">Sign In</Link>
             <Link to="/registration">Registration</Link>
           </ul>
