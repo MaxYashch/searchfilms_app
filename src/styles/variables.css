@@ -1,0 +1,38 @@
+:root {
+  --color-primary: #b33;
+  --color-primary-dark: #933;
+  --color-white: #fff;
+  --color-black: #000;
+	--color-grey-light: #bbb;
+	--color-grey: #999;
+	--color-grey-dark: #444;
+
+  --container-width: 1200px;
+  --container-padding: 20px;
+
+	--fz-base: 16px;
+	--lh-base: 22px;
+	--fz-large: 20px;
+	--lh-large: 28px;
+
+	--fw-base: 400;
+	--fw-bold: 700;
+
+	--ff-base:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
+
+	--font-base: var(--fw-base) var(--fz-base) / var(--lh-base) var(--ff-base);
+
+	--border-radius-base: 4px;
+
+	--trs-base: .15s;
+}
+
+
+
+@media (max-width: 700px) {
+	:root {
+		--container-padding: 10px;
+	}
+}

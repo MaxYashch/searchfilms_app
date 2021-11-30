@@ -1,40 +1,24 @@
 import { Link } from 'react-router-dom';
-// import { SignIn } from '../pages/SignIn';
-// import { Registration } from '../pages/Registration';
 
 function Header() {
   return (
-    <>
-      <nav className="deep-orange accent-3 header">
-        <div className="nav-wrapper">
-          <a href="!" className="brand-logo left">
+    <header className="page-header">
+      <div className="container">
+        <div className="page-header__layout">
+          <Link to="/" className="page-header__logo">
             Searchfilms
-          </a>
-          <ul id="nav-mobile" className="right">
-            <Link to="/signin">Sign in</Link>
-            <Link to="/registration">Registration</Link>
-          </ul>
-          {/* 
-          <ul id="nav-mobile" className="right">
-            <li>
-              <a class="waves-effect deep-orange btn-small" href="!">
-                Sign in
-              </a>
-            </li>
-            <li>
-              <a class="waves-effect deep-orange btn-small" href="!">
-                Sign out
-              </a>
-            </li>{' '}
-            <li>
-              <a class="waves-effect deep-orange btn-small" href="!">
-                Registration
-              </a>
-            </li>
-          </ul> */}
+          </Link>
+          <nav className="page-header__nav top-nav">
+            <Link to="/signin" className="top-nav__link">
+              Sign In
+            </Link>
+            <Link to="/signup" className="top-nav__link">
+              Sign Up
+            </Link>
+          </nav>
         </div>
-      </nav>
-    </>
+      </div>
+    </header>
   );
 }
 export { Header };

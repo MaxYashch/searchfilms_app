@@ -1,22 +1,22 @@
 function Footer() {
   return (
-    <footer className="page-footer blue darken-2 footer">
-      <div className="footer-copyright">
-        <div className="container">
-          © {new Date().getFullYear()} Copyright Text
-        </div>
-        <ul id="nav-mobile" className="right">
-          <li>
+    <footer className="page-footer">
+      <div className="container">
+        <div className="page-footer__layout">
+          <div className="page-footer__copyright">
+            © {new Date().getFullYear()} Copyright Text
+          </div>
+          <nav className="page-footer__nav footer-nav">
             <a
               href="https://github.com/MaxYashch/searchfilms_app"
               target="_blank"
               rel="noreferrer"
-              className="repo"
+              className="footer-nav__link"
             >
               Repo
             </a>
-          </li>
-        </ul>
+          </nav>
+        </div>
       </div>
     </footer>
   );
