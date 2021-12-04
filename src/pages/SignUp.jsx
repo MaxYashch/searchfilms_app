@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { signup } from '../features/userSlice';
+import { useDispatch } from 'react-redux';
+
 // import { Redirect } from 'react-router-dom';
 
 const SignUp = () => {
@@ -6,20 +9,21 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [redirect, setRedirect] = useState(false);
+  const [signedUp, setsignedUp] = useState(false);
 
-  const submit = async (e) => {
+  const dispatch = useDispatch();
+
+  const submit = (e) => {
     e.preventDefault();
 
-    // await fetch('http://localhost:8000/api/register', {
-    //     method: 'POST',
-    //     headers: {'Content-Type': 'application/json'},
-    //     body: JSON.stringify({
-    //         name,
-    //         email,
-    //         password
-    //     })
-    // });
-
+    dispatch(
+      signup({
+        name: name,
+        email: email,
+        password: password,
+        signedUp: true,
+      })
+    );
     // setRedirect(true);
     console.log(name, email, password);
   };

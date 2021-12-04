@@ -1,18 +1,8 @@
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from '../features/userSlice';
 
-const defaultState = {
-  cash: 0,
-};
-
-const reducer = (state = defaultState, action) => {
-  switch (action.type) {
-    case 'ADD':
-      return { ...state, cash: state.cash - action };
-    case 'GET':
-      return { ...state, cash: state.cash + action };
-    default:
-      return state;
-  }
-};
-
-export const store = createStore(reducer);
+export const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});

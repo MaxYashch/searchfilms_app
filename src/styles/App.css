@@ -65,10 +65,16 @@ body, #root {
 
 .top-nav__link {
   margin-right: 20px;
-
   color: var(--color-white);
   text-decoration: none;
   transition: var(--trs-base);
+}
+
+.top-nav__user {
+  margin-right: 60px;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 26px;
 }
 
 .top-nav__link:last-child {

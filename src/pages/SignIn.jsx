@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 // import { Redirect } from 'react-router-dom';
 
 const SignIn = (props) => {
@@ -8,25 +8,9 @@ const SignIn = (props) => {
   const [redirect, setRedirect] = useState(false);
 
   const dispatch = useDispatch();
-  const cashed = useSelector((state) => state.cash);
-
-  console.log(cashed);
 
   const submit = async (e) => {
     e.preventDefault();
-
-    // const response = await fetch('http://localhost:8000/api/login', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   credentials: 'include',
-    //   body: JSON.stringify({
-    //     email,
-    //     password,
-    //   }),
-    // });
-
-    // const content = await response.json();
-
     // setRedirect(true);
     console.log(email, password);
   };
