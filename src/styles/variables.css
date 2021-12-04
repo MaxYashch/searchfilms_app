@@ -12,6 +12,8 @@
   --container-width: 1200px;
   --container-padding: 20px;
 
+	--fz-small: 14px;
+	--lh-small: 20px;
 	--fz-base: 16px;
 	--lh-base: 22px;
 	--fz-large: 20px;

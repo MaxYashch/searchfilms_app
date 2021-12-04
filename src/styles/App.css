@@ -35,12 +35,11 @@ body, #root {
 
 .page-header__layout {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
 .page-header__logo {
-  margin-right: auto;
+  flex: 0 0 auto;
   color: var(--color-white);
   font-size: var(--fz-large);
   line-height: var(--lh-large);
@@ -49,7 +48,14 @@ body, #root {
 }
 
 .page-header__nav {
-  margin-left: 20px;
+  flex: 1 1 auto;
+  padding-left: 60px;
+}
+
+.page-header__auth {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-left: 60px;
 }
 
 @media (any-hover: hover) {
@@ -71,14 +77,19 @@ body, #root {
 }
 
 .top-nav__user {
-  margin-right: 60px;
+  margin-right: 20px;
   color: var(--color-white);
   text-decoration: none;
-  font-size: 26px;
 }
 
+.top-nav__user:last-child,
 .top-nav__link:last-child {
   margin-right: 0;
+}
+
+.top-nav--auth {
+  font-size: var(--fz-small);
+  line-height: var(--lh-small);
 }
 
 @media (any-hover: hover) {
