@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { signout, selectUser } from '../features/userSlice';
+import { signOut, selectUser } from '../features/userSlice';
 
 function SignOut() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const handleSignOut = (e) => {
     e.preventDefault();
-    dispatch(signout());
+    dispatch(signOut());
   };
+
   return (
     <header className="page-header">
       <div className="container">

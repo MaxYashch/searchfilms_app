@@ -170,12 +170,25 @@ iframe {
   max-width: 600px;
 }
 
-.form__field {
-  margin-bottom: 20px;
+.form__field,
+.form__error {
+  margin: 20px 0;
 }
 
-.form__field:last-child {
+.form__field:last-child,
+.form__error:last-child {
   margin-bottom: 0;
+}
+
+.form__field:first-child,
+.form__error:first-child {
+  margin-top: 0;
+}
+
+.form__error {
+  color: var(--color-error);
+  font-size: var(--fz-small);
+  line-height: var(--lh-small);
 }
 
 .form__actions {

@@ -1,18 +1,32 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { signIn } from '../features/userSlice';
 // import { Redirect } from 'react-router-dom';
 
 const SignIn = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [warning, setWarning] = useState(null);
   const [redirect, setRedirect] = useState(false);
 
   const dispatch = useDispatch();
 
   const submit = async (e) => {
     e.preventDefault();
+
+    try {
+      dispatch(
+        signIn({
+          email,
+          password,
+        })
+      );
+      setWarning(null);
+    } catch (e) {
+      setWarning(e.message);
+    }
+
     // setRedirect(true);
-    console.log(email, password);
   };
 
   // if (redirect) {
@@ -45,6 +59,8 @@ const SignIn = (props) => {
           />
         </div>
       </div>
+
+      {warning && <div className="form__error">{warning}</div>}
 
       <div className="form__actions">
         <button className="btn btn--primary btn--lg" type="submit">

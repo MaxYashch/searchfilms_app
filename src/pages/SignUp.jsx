@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signup } from '../features/userSlice';
+import { signUp } from '../features/userSlice';
 import { useDispatch } from 'react-redux';
 
 // import { Redirect } from 'react-router-dom';
@@ -8,24 +8,30 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [warning, setWarning] = useState(null);
   const [redirect, setRedirect] = useState(false);
-  const [signedUp, setsignedUp] = useState(false);
+  //const [signedUp, setsignedUp] = useState(false);
 
   const dispatch = useDispatch();
 
   const submit = (e) => {
     e.preventDefault();
 
-    dispatch(
-      signup({
-        name: name,
-        email: email,
-        password: password,
-        signedUp: true,
-      })
-    );
+    try {
+      dispatch(
+        signUp({
+          name,
+          email,
+          password,
+        })
+      );
+      setWarning(null);
+    } catch (e) {
+      setWarning(e.message);
+    }
+
+    // add to localStr
     // setRedirect(true);
-    console.log(name, email, password);
   };
 
   // if (redirect) {
@@ -70,6 +76,8 @@ const SignUp = () => {
           />
         </div>
       </div>
+
+      {warning && <div className="form__error">{warning}</div>}
 
       <div className="form__actions">
         <button className="btn btn--primary btn--lg" type="submit">
