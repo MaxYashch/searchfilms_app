@@ -32,3 +32,15 @@ export const setUser = (user) => {
   users.push(user);
   setUsers(users);
 };
+
+export const getSessionUser = () => {
+  return findUser(localStorage.getItem('session'));
+};
+
+export const setSessionUser = (email) => {
+  if (email) {
+    localStorage.setItem('session', email);
+  } else {
+    localStorage.removeItem('session');
+  }
+};

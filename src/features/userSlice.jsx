@@ -1,11 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { setUser, findUser } from '../utils/localStorageHelpers';
+import {
+  setUser,
+  findUser,
+  setSessionUser,
+  getSessionUser,
+} from '../utils/localStorageHelpers';
 
 export const userSlice = createSlice({
   name: 'user',
 
   initialState: {
-    user: null,
+    user: getSessionUser(),
   },
 
   reducers: {
@@ -14,6 +19,7 @@ export const userSlice = createSlice({
         throw new Error('User is already created');
       } else {
         setUser(action.payload);
+        setSessionUser(action.payload.email);
         state.user = action.payload;
       }
     },
@@ -25,11 +31,13 @@ export const userSlice = createSlice({
       } else if (user.password !== action.payload.password) {
         throw new Error('Password is incorrect');
       } else {
+        setSessionUser(action.payload.email);
         state.user = user;
       }
     },
 
     signOut(state) {
+      setSessionUser(null);
       state.user = null;
     },
   },
