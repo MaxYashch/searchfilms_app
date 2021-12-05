@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { signUp } from '../features/userSlice';
 import { useDispatch } from 'react-redux';
 
