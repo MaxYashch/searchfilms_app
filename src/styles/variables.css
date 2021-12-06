@@ -1,15 +1,19 @@
 :root {
-  --color-primary: #b33;
-  --color-primary-dark: #933;
+  --color-primary: #33b;
+  --color-primary-dark: #339;
   --color-white: #fff;
   --color-black: #000;
 	--color-grey-light: #bbb;
 	--color-grey: #999;
 	--color-grey-dark: #444;
 
+	--color-error: #e33;
+
   --container-width: 1200px;
   --container-padding: 20px;
 
+	--fz-small: 14px;
+	--lh-small: 20px;
 	--fz-base: 16px;
 	--lh-base: 22px;
 	--fz-large: 20px;
