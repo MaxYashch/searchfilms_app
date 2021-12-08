@@ -34,13 +34,18 @@ export const setUser = (user) => {
 };
 
 export const getSessionUser = () => {
-  return findUser(localStorage.getItem('session'));
+  return findUser(
+    localStorage.getItem('session'),
+    localStorage.getItem('favorites')
+  );
 };
 
 export const setSessionUser = (email) => {
   if (email) {
     localStorage.setItem('session', email);
+    localStorage.setItem('favorites', []);
   } else {
     localStorage.removeItem('session');
+    localStorage.removeItem('favorites');
   }
 };

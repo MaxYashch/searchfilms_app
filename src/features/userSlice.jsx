@@ -40,6 +40,10 @@ export const userSlice = createSlice({
       setSessionUser(null);
       state.user = null;
     },
+
+    favoritesPush(state) {
+
+    }
   },
 });
 

@@ -61,6 +61,8 @@
 	background: var(--color-primary);
 }
 
+
+
 @media (any-hover: hover) {
 	.btn--primary:hover {
 		color: var(--color-white);
@@ -80,16 +82,12 @@
 	background: var(--color-primary-dark);
 }
 
-
-
 .btn--lg {
 	--height: 48px;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size: 16px;
 }
-
-
 
 .btn--sm {
 	--height: 36px;
@@ -98,9 +96,60 @@
 	font-size: 14px;
 }
 
-
-
 .btn--block {
 	display: flex;
 	width: 100%;
 }
+
+
+
+/* --- favorites btn --- */
+.fav-button {
+	border: none;
+	--height: 36px;
+	padding-left: 12px;
+	padding-right: 12px;
+	font-size: 14px;
+	background-color: rgb(106, 155, 219);
+	/* background-color: rgb(212, 166, 14); */
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+/* 
+.fav-button i {
+	position: absolute;
+	left: 70px
+}
+} */
+
+/* .fav-button:active {
+	animation: item 1s ease-in forwards
+} */
+
+/* @keyframes item {
+	0% {
+			top: 20%;
+			color: #000
+	}
+
+	25% {
+			top: 60%;
+			color: #000
+	}
+
+	50% {
+			top: 100%
+	}
+
+	75% {
+			top: 60%
+	}
+
+	0% {
+			top: 0%
+	} */
