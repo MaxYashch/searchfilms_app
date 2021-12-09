@@ -22,6 +22,21 @@
 	--fw-base: 400;
 	--fw-bold: 700;
 
+	--fz-h1: 40px;
+	--lh-h1: 50px;
+	--fw-h1: var(--fw-bold);
+	--font-h1: var(--fw-h1) var(--fz-h1) / var(--lh-h1) var(--ff-base);
+
+	--fz-h2: 32px;
+	--lh-h2: 40px;
+	--fw-h2: var(--fw-bold);
+	--font-h2: var(--fw-h2) var(--fz-h2) / var(--lh-h2) var(--ff-base);
+
+	--fz-h3: 26px;
+	--lh-h3: 32px;
+	--fw-h3: var(--fw-bold);
+	--font-h3: var(--fw-h3) var(--fz-h3) / var(--lh-h3) var(--ff-base);
+
 	--ff-base:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 	sans-serif;
@@ -30,7 +45,7 @@
 
 	--border-radius-base: 4px;
 
-	--trs-base: .15s;
+	--trs-base: .2s;
 }
 
 

@@ -18,7 +18,7 @@ export const setUsers = (users) => {
 };
 
 export const findUser = (email) => {
-  return getUsers().find((user) => user.email === email);
+  return getUsers().find((user) => user.email === email) || null;
 };
 
 export const setUser = (user) => {
@@ -37,7 +37,7 @@ export const getSessionUser = () => {
   return findUser(localStorage.getItem('session'));
 };
 
-export const setSessionUser = (email) => {
+export const setSessionUser = (email, favorites) => {
   if (email) {
     localStorage.setItem('session', email);
   } else {
