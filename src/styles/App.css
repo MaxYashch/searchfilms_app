@@ -1,7 +1,7 @@
 body {
   font: var(--font-base);
-
   min-height: 100vh;
+  min-width: 1000px;
 }
 
 body, #root {
@@ -162,6 +162,25 @@ body, #root {
 
 
 
+/* article */
+.article {
+  margin: 25px 0;
+}
+
+.article p {
+  margin: 16px 0;
+}
+
+.article p:first-child {
+  margin-top: 0;
+}
+
+.article p:last-child {
+  margin-bottom: 0;
+}
+
+
+
 /* form */
 .form--sm {
   max-width: 600px;
@@ -260,12 +279,21 @@ body, #root {
 
 
 
+/* movie-list-actions */
+.movie-list-actions {
+  margin: 20px 0 0;
+}
+
+
+
 /* movie list */
 .movie-poster {
   box-shadow: 0 3px 9px rgba(0, 0, 0, .3);
   border-radius: var(--border-radius-base);
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--color-black);
   transition: var(--trs-base);
 }
 

@@ -1,14 +1,14 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-// import { Navigate } from 'react-router';
 import { selectUser } from './features/userSlice';
 import { useSelector } from 'react-redux';
-import { Homepage } from './pages/Homepage';
+import { Home } from './pages/Home';
+import { Search } from './pages/Search';
 import { NotFound } from './pages/NotFound';
 import { SignUp } from './pages/SignUp';
 import { SignIn } from './pages/SignIn';
 import { Favorites } from './pages/Favorites';
 import { History } from './pages/History';
-import { MovieDetails } from './components/MovieDetails';
+import { Movie } from './pages/Movie';
 import { MainPage } from './components/MainPage';
 import './styles/variables.css';
 import './styles/reset.css';
@@ -23,7 +23,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainPage />}>
-        <Route index element={<Homepage />} />
+        <Route index element={<Home />} />
+        <Route path="search" element={<Search />}>
+          <Route path=":query" element={<Search />} />
+        </Route>
         <Route
           path="favorites"
           element={user ? <Favorites /> : <Navigate to="/signin" />}
@@ -41,7 +44,7 @@ function App() {
           element={user ? <Navigate to="/" /> : <SignUp />}
         />
         <Route path="movie">
-          <Route path=":id" element={<MovieDetails />} />
+          <Route path=":id" element={<Movie />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
@@ -50,4 +53,3 @@ function App() {
 }
 
 export default App;
-// eslint-disable-next-line

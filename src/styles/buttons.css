@@ -31,7 +31,7 @@
 
 .btn--default {
 	color: var(--color-white);
-	background: var(--color-gray);
+	background: var(--color-grey);
 }
 
 @media (any-hover: hover) {
@@ -49,8 +49,8 @@
 .btn.btn--default.btn--disabled,
 .btn.btn--default:disabled {
 	cursor: not-allowed;
-	color: var(--color-gray);
-	background: var(--color-gray-dark);
+	color: var(--color-grey);
+	background: var(--color-grey-dark);
 }
 
 
@@ -120,36 +120,7 @@
 	align-items: center;
 	margin-bottom: 20px;
 }
-/* 
-.fav-button i {
-	position: absolute;
-	left: 70px
+
+.fav-button--active {
+	background: rgb(212, 166, 14);
 }
-} */
-
-/* .fav-button:active {
-	animation: item 1s ease-in forwards
-} */
-
-/* @keyframes item {
-	0% {
-			top: 20%;
-			color: #000
-	}
-
-	25% {
-			top: 60%;
-			color: #000
-	}
-
-	50% {
-			top: 100%
-	}
-
-	75% {
-			top: 60%
-	}
-
-	0% {
-			top: 0%
-	} */

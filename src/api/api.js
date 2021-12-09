@@ -5,10 +5,9 @@ export const movieSearch = async (options = {}) => {
 
   try {
     result = await fetch(
-      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${options.query}&plot=full`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${options.query}&plot=short`
     );
     result = await result.json();
-    console.log('search complete', result);
   } catch (e) {
     console.error('search failed', e.message);
   }
@@ -16,7 +15,7 @@ export const movieSearch = async (options = {}) => {
   return result;
 };
 
-export const movieDetails = async (options = {}) => {
+export const getMovieDetails = async (options = {}) => {
   let result;
 
   try {
@@ -24,7 +23,6 @@ export const movieDetails = async (options = {}) => {
       `https://www.omdbapi.com/?apikey=${API_KEY}&i=${options.imdbID}&plot=full`
     );
     result = await result.json();
-    console.log('search complete', result);
   } catch (e) {
     console.error('search failed', e.message);
   }

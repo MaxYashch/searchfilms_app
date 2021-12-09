@@ -10,7 +10,7 @@ const MoviePoster = (props) => {
           {!movie.Poster || movie.Poster === 'N/A' ? (
             <div className="movie-poster__image-placeholder">no image</div>
           ) : (
-            <img className="movie-poster__image" src={movie.Poster} />
+            <img className="movie-poster__image" src={movie.Poster} alt="" />
           )}
         </div>
         <div className="movie-poster__main">
